@@ -28,6 +28,10 @@ extension UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    func popViewController() {
+        navigationController?.popViewController(animated: true)
+    }
+    
     func configureNavigationBar(backgoundColor: UIColor = .white, title: String, titleColor: UIColor = .black) {
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.configureWithOpaqueBackground()

@@ -7,14 +7,14 @@
 
 import UIKit
 
-class ListUser: UIViewController {
+class ListUserVC: UIViewController {
 
     @IBOutlet weak var userTableView: UITableView!
     
+    var onUserSelectedAction: ((_ selectedUser: String)-> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +37,7 @@ class ListUser: UIViewController {
 
 }
 
-extension ListUser: UITableViewDataSource, UITableViewDelegate {
+extension ListUserVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
@@ -48,6 +48,7 @@ extension ListUser: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("selected at ", indexPath.row)
+        onUserSelectedAction?("\(indexPath.row)")
+        popViewController()
     }
 }
