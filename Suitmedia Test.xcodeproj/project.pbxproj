@@ -16,6 +16,8 @@
 		D253980A29018C7B0072BD2B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253980829018C7B0072BD2B /* MainVC.swift */; };
 		D253980B29018C7B0072BD2B /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D253980929018C7B0072BD2B /* MainVC.xib */; };
 		D253981029019E430072BD2B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253980F29019E430072BD2B /* Extensions.swift */; };
+		D25398142901A4A00072BD2B /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25398122901A4A00072BD2B /* WelcomeVC.swift */; };
+		D25398152901A4A00072BD2B /* WelcomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D25398132901A4A00072BD2B /* WelcomeVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		D253980829018C7B0072BD2B /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		D253980929018C7B0072BD2B /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
 		D253980F29019E430072BD2B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D25398122901A4A00072BD2B /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		D25398132901A4A00072BD2B /* WelcomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 		D253980729018C490072BD2B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D25398112901A48C0072BD2B /* Welcome */,
 				D253980C2901901C0072BD2B /* Main */,
 			);
 			path = Scenes;
@@ -118,6 +123,15 @@
 				D253980F29019E430072BD2B /* Extensions.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		D25398112901A48C0072BD2B /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				D25398122901A4A00072BD2B /* WelcomeVC.swift */,
+				D25398132901A4A00072BD2B /* WelcomeVC.xib */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		E21163BD62374A9A68265318 /* Pods */ = {
@@ -191,6 +205,7 @@
 				D253980B29018C7B0072BD2B /* MainVC.xib in Resources */,
 				D2539800290189DB0072BD2B /* LaunchScreen.storyboard in Resources */,
 				D25397FD290189DB0072BD2B /* Assets.xcassets in Resources */,
+				D25398152901A4A00072BD2B /* WelcomeVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +244,7 @@
 				D253981029019E430072BD2B /* Extensions.swift in Sources */,
 				D25397F8290189D80072BD2B /* ViewController.swift in Sources */,
 				D253980A29018C7B0072BD2B /* MainVC.swift in Sources */,
+				D25398142901A4A00072BD2B /* WelcomeVC.swift in Sources */,
 				D25397F4290189D80072BD2B /* AppDelegate.swift in Sources */,
 				D25397F6290189D80072BD2B /* SceneDelegate.swift in Sources */,
 			);

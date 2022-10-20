@@ -9,12 +9,13 @@ import UIKit
 
 class MainVC: UIViewController {
     
+    @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var palindromeTF: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     private func showLogoutAlert(isPalindrome: Bool?) {
@@ -31,7 +32,8 @@ class MainVC: UIViewController {
     }
     
     @IBAction func onNextBtnPressed() {
-
+        let vc = WelcomeVC(name: nameTF.text)
+        navigateTo(vc)
     }
 
 }
