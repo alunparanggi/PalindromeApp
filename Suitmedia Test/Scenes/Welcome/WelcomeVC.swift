@@ -35,7 +35,13 @@ class WelcomeVC: UIViewController {
         nameLabel.text = name
     }
     
+    private func updateSelectedUser(_ name: String) {
+        selectedUserLabel.text = name
+    }
+    
     @IBAction func onChooseUserBtnPressed() {
-        
+        let vc = ListUserVC()
+        vc.onUserSelectedAction = updateSelectedUser
+        navigateTo(vc)
     }
 }
