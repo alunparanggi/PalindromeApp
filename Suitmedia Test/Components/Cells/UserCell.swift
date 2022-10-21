@@ -18,6 +18,13 @@ class UserCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        userImage.layer.cornerRadius = 25
+    }
+    
+    func setData(_ data: User) {
+        userImage.downloaded(from: data.avatarUrl ?? "")
+        userNameLabel.text = "\(data.firstName ?? "") \(data.lastName ?? "")"
+        userEmailLabel.text = data.email
     }
     
 }

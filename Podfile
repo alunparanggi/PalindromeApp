@@ -6,5 +6,9 @@ target 'Suitmedia Test' do
   use_frameworks!
 
   # Pods for Suitmedia Test
+  pod 'Alamofire'
+  pod 'SkeletonView'
+  pod 'RxSwift'
+  pod 'SwiftyJSON'
 
 end

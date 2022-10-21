@@ -22,6 +22,15 @@
 		D253981C2901AC380072BD2B /* ListUserVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D253981A2901AC380072BD2B /* ListUserVC.xib */; };
 		D25398202901ADB10072BD2B /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253981E2901ADB10072BD2B /* UserCell.swift */; };
 		D25398212901ADB10072BD2B /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D253981F2901ADB10072BD2B /* UserCell.xib */; };
+		D25398242901BAF30072BD2B /* ApiConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25398232901BAF30072BD2B /* ApiConnector.swift */; };
+		D25398262901BD460072BD2B /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25398252901BD460072BD2B /* Enums.swift */; };
+		D25398292901BE5B0072BD2B /* UserApiConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25398282901BE5B0072BD2B /* UserApiConnector.swift */; };
+		D253982C2901BF320072BD2B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253982B2901BF320072BD2B /* User.swift */; };
+		D253982E2901C1FA0072BD2B /* ListUserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253982D2901C1FA0072BD2B /* ListUserProtocol.swift */; };
+		D25398302901C3100072BD2B /* ListUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D253982F2901C3100072BD2B /* ListUserModel.swift */; };
+		D25398322901C3C40072BD2B /* ListUserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25398312901C3C40072BD2B /* ListUserRouter.swift */; };
+		D25398342901C4000072BD2B /* ListUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25398332901C4000072BD2B /* ListUserPresenter.swift */; };
+		D25398362901C48F0072BD2B /* ListUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25398352901C48F0072BD2B /* ListUserInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +53,15 @@
 		D253981A2901AC380072BD2B /* ListUserVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListUserVC.xib; sourceTree = "<group>"; };
 		D253981E2901ADB10072BD2B /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		D253981F2901ADB10072BD2B /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		D25398232901BAF30072BD2B /* ApiConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConnector.swift; sourceTree = "<group>"; };
+		D25398252901BD460072BD2B /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		D25398282901BE5B0072BD2B /* UserApiConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiConnector.swift; sourceTree = "<group>"; };
+		D253982B2901BF320072BD2B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D253982D2901C1FA0072BD2B /* ListUserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUserProtocol.swift; sourceTree = "<group>"; };
+		D253982F2901C3100072BD2B /* ListUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUserModel.swift; sourceTree = "<group>"; };
+		D25398312901C3C40072BD2B /* ListUserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUserRouter.swift; sourceTree = "<group>"; };
+		D25398332901C4000072BD2B /* ListUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUserPresenter.swift; sourceTree = "<group>"; };
+		D25398352901C48F0072BD2B /* ListUserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUserInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +105,8 @@
 		D25397F2290189D80072BD2B /* Suitmedia Test */ = {
 			isa = PBXGroup;
 			children = (
+				D253982A2901BF1B0072BD2B /* Model */,
+				D25398272901BE3E0072BD2B /* Api */,
 				D253980E29019E330072BD2B /* Helper */,
 				D253980D290198990072BD2B /* Resources */,
 				D253981D2901AD840072BD2B /* Components */,
@@ -131,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				D253980F29019E430072BD2B /* Extensions.swift */,
+				D25398232901BAF30072BD2B /* ApiConnector.swift */,
+				D25398252901BD460072BD2B /* Enums.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -149,6 +171,11 @@
 			children = (
 				D25398192901AC380072BD2B /* ListUserVC.swift */,
 				D253981A2901AC380072BD2B /* ListUserVC.xib */,
+				D253982D2901C1FA0072BD2B /* ListUserProtocol.swift */,
+				D253982F2901C3100072BD2B /* ListUserModel.swift */,
+				D25398312901C3C40072BD2B /* ListUserRouter.swift */,
+				D25398332901C4000072BD2B /* ListUserPresenter.swift */,
+				D25398352901C48F0072BD2B /* ListUserInteractor.swift */,
 			);
 			path = ListUser;
 			sourceTree = "<group>";
@@ -168,6 +195,22 @@
 				D253981F2901ADB10072BD2B /* UserCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		D25398272901BE3E0072BD2B /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				D25398282901BE5B0072BD2B /* UserApiConnector.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		D253982A2901BF1B0072BD2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D253982B2901BF320072BD2B /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E21163BD62374A9A68265318 /* Pods */ = {
@@ -190,6 +233,7 @@
 				D25397EC290189D80072BD2B /* Sources */,
 				D25397ED290189D80072BD2B /* Frameworks */,
 				D25397EE290189D80072BD2B /* Resources */,
+				7EB29ABFE87FB007CEAF5D3E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,6 +294,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7EB29ABFE87FB007CEAF5D3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Suitmedia Test/Pods-Suitmedia Test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Suitmedia Test/Pods-Suitmedia Test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Suitmedia Test/Pods-Suitmedia Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		ADB66B8C4BB114CFEC0ED0EE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -279,14 +340,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D25398302901C3100072BD2B /* ListUserModel.swift in Sources */,
 				D25398202901ADB10072BD2B /* UserCell.swift in Sources */,
+				D253982E2901C1FA0072BD2B /* ListUserProtocol.swift in Sources */,
 				D253981029019E430072BD2B /* Extensions.swift in Sources */,
+				D25398262901BD460072BD2B /* Enums.swift in Sources */,
+				D25398342901C4000072BD2B /* ListUserPresenter.swift in Sources */,
 				D25397F8290189D80072BD2B /* ViewController.swift in Sources */,
+				D25398292901BE5B0072BD2B /* UserApiConnector.swift in Sources */,
 				D253980A29018C7B0072BD2B /* MainVC.swift in Sources */,
 				D25398142901A4A00072BD2B /* WelcomeVC.swift in Sources */,
 				D25397F4290189D80072BD2B /* AppDelegate.swift in Sources */,
+				D253982C2901BF320072BD2B /* User.swift in Sources */,
 				D25397F6290189D80072BD2B /* SceneDelegate.swift in Sources */,
+				D25398242901BAF30072BD2B /* ApiConnector.swift in Sources */,
+				D25398322901C3C40072BD2B /* ListUserRouter.swift in Sources */,
 				D253981B2901AC380072BD2B /* ListUserVC.swift in Sources */,
+				D25398362901C48F0072BD2B /* ListUserInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
