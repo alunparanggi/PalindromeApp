@@ -6,13 +6,24 @@
 //
 
 import UIKit
+import SkeletonView
 
 class ListUserVC: UIViewController {
 
     @IBOutlet weak var userTableView: UITableView!
+    @IBOutlet weak var pageLabel: UILabel!
+    @IBOutlet weak var emptyView: UIView!
     
     var presenter: ListUserViewToPresenterProtocol?
     var onUserSelectedAction: ((_ selectedUser: String)-> Void)?
+    
+    private var currentPage = 1 {
+        didSet {
+            pageLabel.text = "Page \(currentPage)"
+            emptyView.isHidden = true
+            fetchData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,13 +47,15 @@ class ListUserVC: UIViewController {
             self?.userTableView.refreshControl?.endRefreshing()
         }
     }
+    
     private func prepareUI() {
         configureNavigationBar(title: "Third Screen")
         initTableView(tableView: userTableView, nibName: UserCell.reusableId)
     }
     
     private func fetchData() {
-        let req = ListUser.ShowUser.Request(page: 1)
+        userTableView.showAnimatedGradientSkeleton()
+        let req = ListUser.ShowUser.Request(page: currentPage)
         presenter?.fetchUsers(request: req)
     }
     
@@ -53,11 +66,28 @@ class ListUserVC: UIViewController {
         tableView.delegate = self
         tableView.allowsMultipleSelection = false
     }
+    
+    @IBAction func onPreviousBtnPressed() {
+        if currentPage > 1 {
+            currentPage -= 1
+        }
+    }
+    
+    @IBAction func onNextBtnPressed() {
+        guard let users = presenter?.users?.displayedUsers, !users.isEmpty else { return }
+        currentPage += 1
+    }
+    
 }
 
 extension ListUserVC: ListUserPresenterToViewProtocol {
     func showUsers() {
-        userTableView.reloadData()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            self?.userTableView.hideSkeleton()
+            guard let users = self?.presenter?.users?.displayedUsers else { return }
+            self?.userTableView.reloadData()
+            self?.emptyView.isHidden = !users.isEmpty
+        }
     }
     
     func showError(error: String) {
@@ -66,7 +96,16 @@ extension ListUserVC: ListUserPresenterToViewProtocol {
 }
 
 
-extension ListUserVC: UITableViewDataSource, UITableViewDelegate {
+extension ListUserVC: SkeletonTableViewDataSource, UITableViewDelegate {
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return UserCell.reusableId
+    }
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter?.users?.displayedUsers.count ?? 0
     }
