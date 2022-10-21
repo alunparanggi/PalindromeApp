@@ -40,8 +40,7 @@ class WelcomeVC: UIViewController {
     }
     
     @IBAction func onChooseUserBtnPressed() {
-        let vc = ListUserVC()
-        vc.onUserSelectedAction = updateSelectedUser
+        let vc = ListUserRouter.createModule(onUserSelectedAction: updateSelectedUser)
         navigateTo(vc)
     }
 }
